@@ -10,13 +10,13 @@ namespace TodoApp.Customers
 {
     public class Customer : BasicAggregateRoot<Guid>
     {
-        public Guid Id { get; private set; }
-        public string CustomerName { get; private set; }
-        public string CustomerEmail { get; private set; }
-        public string PhoneNumber { get; private set;}
-        public string Address { get; private set;}
-        public decimal OpBalance { get; private set;}
-        public decimal Limit { get; private set;}
-        public string Image {  get; private set;}
+        public Guid Id { get;  set; }
+        public string CustomerName { get;  set; }
+        public string CustomerEmail { get;  set; }
+        public string PhoneNumber { get;  set;}
+        public string Address { get;  set;}
+        public decimal OpBalance { get;  set;}
+        public decimal Limit { get;  set;}
+        public string Image {  get;  set;}
     }
 }
