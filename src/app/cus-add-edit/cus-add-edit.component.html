@@ -1,0 +1,47 @@
+<div mat-dialog-title>
+    <h1>Customer Form</h1>
+</div>
+<form [formGroup]="cusForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Image</mat-label>
+                <input matInput type="text" placeholder="Image" formControlName="image">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput  type="text" placeholder="Ex. Muhammad" formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>phone</mat-label>
+                <input matInput type="text" placeholder="Ex: 01912-xxxxxx" formControlName="phone">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Ex. muhammad@gmail.com" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput  type="text" placeholder="Ex. Makkah" formControlName="address">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>OpBalance</mat-label>
+                <input matInput type="text" formControlName="opBalance">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Limit</mat-label>
+                <input matInput formControlName="limit">
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button>Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+    </div>
+</form>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CusAddEditComponent } from './cus-add-edit/cus-add-edit.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firstdemo-front';
+
+  constructor(private _matDialog: MatDialog) 
+  {
+  }
+
+  openCusAddEditForm()
+  {
+    this._matDialog.open(CusAddEditComponent)
+  }
 }
