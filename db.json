@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "customers": [
+    {
+      "id": "b575",
+      "image": "image",
+      "name": "Muhammad",
+      "phone": "0199347934",
+      "email": "muhammad@gmail.com",
+      "address": "Madina",
+      "opBalance": "1234",
+      "limit": "1232"
+    },
+    {
+      "id": "5ffb",
+      "image": "",
+      "name": "",
+      "phone": "",
+      "email": "",
+      "address": "",
+      "opBalance": "",
+      "limit": ""
+    },
+    {
+      "id": "3ae6",
+      "image": "",
+      "name": "",
+      "phone": "",
+      "email": "",
+      "address": "",
+      "opBalance": "",
+      "limit": ""
+    }
+  ]
+}

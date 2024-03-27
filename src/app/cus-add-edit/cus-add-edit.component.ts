@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { CustomerService } from '../services/customer.service';
+import { DialogRef } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-cus-add-edit',
@@ -9,7 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class CusAddEditComponent {
   cusForm: FormGroup;
 
-  constructor(private _fb: FormBuilder) 
+  constructor(private _fb: FormBuilder, private _cusService: CustomerService, private _dialogRef: DialogRef) 
   {
     this.cusForm = this._fb.group({
       image:'',
@@ -24,6 +26,16 @@ export class CusAddEditComponent {
 
   onFormSubmit()
   {
-    console.log(this.cusForm.value);
+    this._cusService.addCustomer(this.cusForm.value).subscribe({
+      next: (val: any) => {
+        alert('added customer successfully')
+        this._dialogRef.close();
+      },
+      error: (err: any) => {
+        console.error(err);
+        this._dialogRef.close();
+      }
+    });
+     
   }
 }
